@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Checkpoint: fraud QR code detector</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>QR Checkpoint</h1>
+  <p>Check a QR code before you open it. Nothing is opened or visited automatically.</p>
+</header>
+
+<main>
+  <section class="input" aria-label="Provide a QR code">
+    <div class="stage" id="stage">
+      <video id="video" playsinline muted hidden></video>
+      <img id="preview" alt="Uploaded QR code" hidden>
+      <p id="stageHint">Upload an image or start the camera.</p>
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+    </div>
+    <div class="actions">
+      <label class="btn primary" for="file">Upload QR image</label>
+      <input type="file" id="file" accept="image/*" hidden>
+      <button class="btn" id="camBtn" type="button">Start camera</button>
+    </div>
+    <div class="manual">
+      <label for="manual">Or paste the text inside the QR code</label>
+      <textarea id="manual" rows="2" placeholder="https://example.com/pay"></textarea>
+      <button class="btn" id="checkBtn" type="button">Check text</button>
+    </div>
+    <canvas id="canvas" hidden></canvas>
+  </section>
+
+  <section class="result" id="result" aria-live="polite">
+    <p class="empty">Results appear here after you scan, upload or paste a code.</p>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

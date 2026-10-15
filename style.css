@@ -1,0 +1,243 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Header Container */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Left: Logo */
+.header-logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  stroke: #38bdf8;
+}
+
+/* Middle: Title Centering */
+.header-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-title h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  text-transform: uppercase;
+}
+
+/* Right: Dropdown Container */
+.header-dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: #1e293b;
+  color: #ffffff;
+  border: 1px solid #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-btn:hover {
+  background-color: #334155;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Dropdown Menu Popup */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  background-color: #ffffff;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  z-index: 1000;
+  border: 1px solid #e2e8f0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.625rem 1rem;
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.dropdown-menu hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 0.25rem 0;
+}
+
+.dropdown-menu a.logout-link {
+  color: #ef4444;
+}
+
+.dropdown-menu a.logout-link:hover {
+  background-color: #fef2f2;
+}
+
+/* Hover-to-Open Behavior (or toggle via JS class `.show`) */
+.header-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.stats-card {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 600px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  margin: 1rem;
+}
+
+.stats-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.stats-icon {
+  background: #0284c7;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.stats-subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.stat-item {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.3;
+}
+
+.footer{
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;            /* Stretches the element from the left edge to the right edge */
+    width: 100%;         /* Ensures full viewport width */
+    padding: 1rem 2rem;
+    z-index: 1000;
+    gap: 20px;
+}
+
+#footer-logo{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    
+}
+
+#foot-p{
+    color: white;
+    font-weight:bold;
+
+}
+
+#copyright{
+    color: white;
+    
+}
+
+#foot-mail{
+    text-decoration: none;
+    color: white;
+    font-weight:bold;
+}
